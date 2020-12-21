@@ -33,3 +33,7 @@ disciplina5 = Disciplina(5, "Legislação Aplicada à Informática", "Maria Fern
 disciplina6 = Disciplina(6, "Empreendedorismo e Inovação", "Marco Antônio Araújo", forum6, [Aula(1, "Aula 1: Projeto de Empreendedorismo")], [Trabalho(1, "Trabalho P1", "26/09/2020", 2), Trabalho(2, "Trabalho P2", "27/11/2020", 2)], [Prova(1, "Prova P1", "26/09/2020", 8), Prova(2, "Prova P2", "27/11/2020", 8)])
 
 listaDisciplinas = [disciplina1, disciplina2, disciplina3, disciplina4, disciplina5, disciplina6]
+
+
+from application.controller import disciplinas_controller
+from application.controller import index_controller
