@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
+    <title>Ambiente Virtual de Aprendizagem</title>
+</head>
+<body>
+    <header>
+        <img id="logotipoHeader" src="{{url_for('static', filename = 'img/logotipoAVA.png')}}">
+        <nav>
+            <ul id="listaIconesHeader">
+                <li id="iconesHeader"><a href="{{url_for('home')}}"><img src="{{url_for('static', filename = 'img/iconeDeInicio.png')}}"></a></li>
+                <li id="iconesHeader"><a href=""><img src="{{url_for('static', filename = 'img/iconeDisciplinas.png')}}"></a></li>
+                <li id="iconesHeader"><a><img src="{{url_for('static', filename = 'img/iconeForum.png')}}"></a></li>
+                <li id="iconesHeader"><a><img src="{{url_for('static', filename = 'img/sininhoDeNotificacoes.png')}}"></a></li>
+                <li id="iconesHeader"><a><img src="{{url_for('static', filename = 'img/iconeConfiguracoes.png')}}"></a></li>
+                <li id="iconesHeader"><a><img src="{{url_for('static', filename = 'img/perfilDeUsuario.png')}}"></a></li>
+            </ul>
+            <ul id="listaTitulosHeader">
+                <li id="titulosHeader"><a href="{{url_for('home')}}"><h5>Início</h5></a></li>
+                <li id="titulosHeader"><a href="{{url_for('disciplinas')}}"><h5>Disciplinas</h5></a></li>
+                <li id="titulosHeader"><a><h5>Fóruns</h5></a></li>
+                <li id="titulosHeader"><a><h5>Notificações</h5></a></li>
+                <li id="titulosHeader"><a><h5>Configurações</h5></a></li>
+                <li id="titulosHeader"><a><h5>Conta</h5></a></li>
+            </ul>
+        </nav>
+        <div id="divPesquisa">
+            <input type="text" id="txtPesquisa" placeholder="Pesquisar"/>
+            <img src="{{url_for('static', filename = 'img/lupaDePesquisa.png')}}" id="btnPesquisa" alt="Pesquisar"/>
+        </div>
+    </header>
+    
+    {% block body %}{% endblock %}
+
+    <footer>
+        <ul id="botaoFooter">
+            <li id="iconeFooter"><a><img src="{{url_for('static', filename = 'img/iconeSair.png')}}"></a></li>
+            <li id="tituloFooter"><a>Sair</a></li>
+        </ul>
+        <img id="logotipoFooter" src="{{url_for('static', filename = 'img/logotipoAVA.png')}}">
+    </footer>
+</body>
+</html>

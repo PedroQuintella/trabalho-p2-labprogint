@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<article id="conteudo">
+    <section id="tituloAVA">
+        <h1>Ambiente Virtual de Aprendizagem</h1>
+    </section>
+    <section id="tituloDisciplinas">
+        <h3>Disciplinas Recentes</h3>
+    </section>    
+    <section id="CardsDisciplinas">
+        {% for disciplina in listaDisciplinasRecentes %}
+        <div id="disciplina">
+            <h4>{{disciplina.get_nome()}}</h4>
+            <h4>Professor: {{disciplina.get_professor()}}</h4>
+            <button id="botaoAcessar">Acessar</button>
+        </div>
+        {% endfor %}
+    </section>
+    <section id="tituloForuns">
+        <h3>Foruns Recentes</h3>
+    </section>    
+    <section id="CardsForuns">
+        {% for forum in listaForunsRecentes %}
+        <div id="forum">
+            <h4>{{forum.get_titulo()}}</h4>
+            <h4>Professor: {{forum.get_professor()}}</h4>
+            <button id="botaoAcessar">Acessar</button>
+        </div>
+        {% endfor %}
+    </section>
+</article>
+
+{% endblock %}
